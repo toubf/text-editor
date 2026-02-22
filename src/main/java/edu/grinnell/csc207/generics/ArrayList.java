@@ -66,7 +66,7 @@ public class ArrayList<T> implements List<T>{
         if (index < 0 || index >= sz) {
             throw new IndexOutOfBoundsException(index);
         } else {
-            T ret = data[index];        peeeww = 
+            T ret = data[index];
             sz -= 1;
             return ret;
         }

@@ -41,7 +41,7 @@ public class CEO {
 
     /** @return the CEO's work noise. */
     public String makeWorkNoise() {
-        return "Do More Work More Do More Work More Do More Work";
+        return "MOANS *in exorbintant salery*";
     }
 
 }

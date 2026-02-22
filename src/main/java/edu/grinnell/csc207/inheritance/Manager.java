@@ -41,7 +41,7 @@ public class Manager implements Employee {
 
     /** @return the manager's work noise. */
     public String makeWorkNoise() {
-        return "Do Work Do Work Do Work";
+        return "Do Work *whines* Do Work";
     }
 
 }

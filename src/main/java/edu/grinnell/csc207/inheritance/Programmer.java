@@ -35,7 +35,7 @@ public class Programmer implements Employee {
 
     /** @return the programmer's work noise. */
     public String makeWorkNoise() {
-        return "Clack clack clack";
+        return "Arf clack clack";
     }
 
 }

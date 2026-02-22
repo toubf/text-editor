@@ -33,6 +33,6 @@ public class Accountant implements Employee {
 
     /** @return the account's noise */
     public String makeWorkNoise() {
-        return "$$$";
+        return "$$$ (ch-ching) $$$";
     }
 }
