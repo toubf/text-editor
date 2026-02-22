@@ -66,12 +66,52 @@ public class ArrayList<T> implements List<T>{
         if (index < 0 || index >= sz) {
             throw new IndexOutOfBoundsException(index);
         } else {
-            T ret = data[index];
-            for (int i = index; i < data.length - 1; i++) {
-                data[i] = data[i + 1];
-            }
+            T ret = data[index];        peeeww = 
             sz -= 1;
             return ret;
         }
+    }
+
+    /** Place a new element sep of type T inbetween each pair of existing elements
+     * 
+     * @param sep the element to insert
+     */
+    private void intersperse(T sep){
+        T[] peeeww = this.data;
+        this.data = (T[])(new Object[2*this.size()]);
+        for( int i = 0; i < (peeeww.length - 2); i++){
+            this.add(peeeww[i]);
+            this.add(sep);
+        } 
+        this.add(peeeww[peeeww.length-1]);
+    }
+
+    /** Comparison cannot be made over type T, because comparisons are specific
+     * to object type
+     *  
+     */ 
+    private T maximum(){
+        throw new UnsupportedOperationException();
+    }
+
+    /** Returns the array list as a string in the form "[x, x1,... xn]"
+     * 
+     * @return String 
+    */
+    private String makeIntoString(){
+        String contents = "[";
+        for(int i = 0; i < this.size(); i++){
+            contents += this.get(i) + ", ";
+        }
+        contents += "]";
+        return contents;
+        
+    }
+    /** Comparison cannot be made over type T, because comparisons are specific
+     * to object type
+     * We feel sad about this :C
+     */ 
+    private void insertionSort(){
+        throw new UnsupportedOperationException();
     }
 }
