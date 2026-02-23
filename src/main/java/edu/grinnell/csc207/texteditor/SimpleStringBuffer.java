@@ -18,7 +18,7 @@ public class SimpleStringBuffer implements Buffer {
     }
 
     public void insert(char ch) {
-        String old = this.buff;
+        String old = buff;
         buff = old.substring(0,cursor);
         buff += ch;
         buff += old.substring(cursor);
@@ -27,7 +27,7 @@ public class SimpleStringBuffer implements Buffer {
 
     public void delete() {
         if (cursor != 0){
-            String old = this.buff;
+            String old = buff;
             buff = old.substring(0, --cursor);
             buff += old.substring(cursor +1);
         }

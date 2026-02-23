@@ -4,35 +4,81 @@ package edu.grinnell.csc207.texteditor;
  * A gap buffer-based implementation of a text buffer.
  */
 public class GapBuffer implements Buffer {
+    private int size, cursor, endGap;
+    private char[] buff;
+    public GapBuffer(){
+        size=10;
+        cursor = 0;
+        endGap = size-1;
+        buff = new char[size];
+    }
+
+    public void expandBuffer(){
+        char[] old = buff;
+        buff = new char[size*2];
+        for(int i=0; i<cursor; i++){
+            buff[i] = old[i];
+        }
+        for(int j = size-1; j >= endGap; j--){
+            buff[j+size] = old[j];
+        }
+        endGap+=size;
+        size*=2;if (cursor != 0){
+            buff[--endGap] = buff[--cursor];
+        }
+    }
+
     public void insert(char ch) {
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+        if (cursor == endGap){
+            this.expandBuffer();
+        }
+
+        buff[cursor] = ch;
+        cursor++;
     }
 
     public void delete() {
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+        if(cursor != 0){
+            cursor--;
+        }
     }
 
     public int getCursorPosition() {
-        throw new UnsupportedOperationException("Unimplemented method 'getCursorPosition'");
+        return cursor;
     }
 
     public void moveLeft() {
-        throw new UnsupportedOperationException("Unimplemented method 'moveLeft'");
+        if (cursor > 0){
+            buff[--endGap] = buff[--cursor];
+        }
     }
 
     public void moveRight() {
-        throw new UnsupportedOperationException("Unimplemented method 'moveRight'");
+        if (endGap < size-1){
+            buff[cursor++] = buff[endGap++];
+        }
     }
 
     public int getSize() {
-        throw new UnsupportedOperationException("Unimplemented method 'getSize'");
+        return size - (endGap-cursor);
     }
 
     public char getChar(int i) {
-        throw new UnsupportedOperationException("Unimplemented method 'getChar'");
+        if(i<cursor){
+            return buff[i];
+        }else{
+            return buff[i + endGap - cursor];
+        }
     }
 
     public String toString() {
-        throw new UnsupportedOperationException("Unimplemented method 'toString'");
+        String output = "";
+        for(int i = 0; i < cursor; i++){
+            output += buff[i];
+        }
+        for (int i = endGap; i < size; i++){
+            output += buff[i];
+        }
+        return output;
     }
 }
