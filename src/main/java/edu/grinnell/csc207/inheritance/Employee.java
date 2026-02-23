@@ -1,18 +1,30 @@
 package edu.grinnell.csc207.inheritance;
 
 /** An employee. */
-public interface Employee {
+public class Employee {
+    protected int salary;
+    protected String name;
+    protected String id;
+    protected String workNoise;
 
     /** @return the employee's name. */
-    String getName();
+    String getName(){
+        return name;
+    }
 
     /** @return the employee's ID. */
-    String getId();
+    String getId(){
+        return id;
+    }
 
     /** @return the employee's salary. */
-    int getSalary();
+    int getSalary(){
+        return salary;
+    }
 
     /** @return the noise the employee makes while working. */
-    String makeWorkNoise();
+    String makeWorkNoise(){
+        return workNoise;
+    }
 
 }

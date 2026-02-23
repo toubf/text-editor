@@ -3,11 +3,7 @@ package edu.grinnell.csc207.inheritance;
 import java.util.List;
 
 /** A CEO. */
-public class CEO {
-
-    private String name;
-
-    private String id;
+public class CEO extends Employee{
 
     private List<Employee> reportees;
 
@@ -22,26 +18,7 @@ public class CEO {
         this.name = "(CEO) " + name;
         this.id = id;
         this.reportees = reportees;
+        this.salary = 8000000;
+        this.workNoise = "MOANS *in exorbintant salery*";
     }
-
-    /** @return the CEO's name. */
-    public String getName() {
-        return name;
-    }
-
-    /** @return the CEO's ID. */
-    public String getId() {
-        return id;
-    }
-
-    /** @return the CEO's salary. */
-    public int getSalary() {
-        return 80000 * 100;
-    }
-
-    /** @return the CEO's work noise. */
-    public String makeWorkNoise() {
-        return "MOANS *in exorbintant salery*";
-    }
-
 }

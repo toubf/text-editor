@@ -3,12 +3,7 @@ package edu.grinnell.csc207.inheritance;
 import java.util.List;
 
 /** A manager. */
-public class Manager implements Employee {
-
-    private String name;
-
-    private String id;
-
+public class Manager extends Employee {
     private List<Employee> reportees;
 
     /**
@@ -22,26 +17,8 @@ public class Manager implements Employee {
         this.name = "(MGR) " + name;
         this.id = id;
         this.reportees = reportees;
-    }
-
-    /** @return the manager's name. */
-    public String getName() {
-        return name;
-    }
-
-    /** @return the manager's ID. */
-    public String getId() {
-        return id;
-    }
-
-    /** @return the manager's salary. */
-    public int getSalary() {
-        return 120000 * 3;
-    }
-
-    /** @return the manager's work noise. */
-    public String makeWorkNoise() {
-        return "Do Work *whines* Do Work";
+        this.salary = 120000;
+        this.workNoise = "Do Work *whines* Do Work";
     }
 
 }
