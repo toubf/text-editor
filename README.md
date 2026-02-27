@@ -5,7 +5,7 @@
 ## Resources Used
 
 + oracle javadocs pages for String, char
-+ ...
++ Referenced Ella & Cadel's SpeedReader for try/catch syntax
 + ...
 
 ## Changelog

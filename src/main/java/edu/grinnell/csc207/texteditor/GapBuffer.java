@@ -9,7 +9,7 @@ public class GapBuffer implements Buffer {
     public GapBuffer(){
         size=10;
         cursor = 0;
-        endGap = size-1;
+        endGap = size;
         buff = new char[size];
     }
 
@@ -23,16 +23,14 @@ public class GapBuffer implements Buffer {
             buff[j+size] = old[j];
         }
         endGap+=size;
-        size*=2;if (cursor != 0){
-            buff[--endGap] = buff[--cursor];
-        }
+        size*=2;
+        
     }
 
     public void insert(char ch) {
-        if (cursor == endGap){
+        if (cursor >= endGap){
             this.expandBuffer();
         }
-
         buff[cursor] = ch;
         cursor++;
     }
