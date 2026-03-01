@@ -52,7 +52,7 @@ public class GapBuffer implements Buffer {
     }
 
     public void moveRight() {
-        if (endGap < size-1){
+        if (endGap < size){
             buff[cursor++] = buff[endGap++];
         }
     }
