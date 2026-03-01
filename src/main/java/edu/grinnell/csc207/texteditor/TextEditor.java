@@ -14,23 +14,30 @@ import com.googlecode.lanterna.TerminalPosition;
  * The driver for the TextEditor Application.
  */
 public class TextEditor {
-
-    public static void drawBuffer(GapBuffer buf, Screen screen){
+    /**
+     * Prints contents of given buffer to given screen. 
+     * Inserts a cursor character at the buffer's cursor position.
+     * @param buf the GapBuffer to display
+     * @param screen the Screen to display it on
+     */
+    public static void drawBuffer(GapBuffer buf, Screen screen) {
         screen.clear();
-
         int cursorPos = buf.getCursorPosition();
-        for(int i = 0; i < cursorPos; i++){
-            screen.setCharacter(new TerminalPosition(i,0), TextCharacter.fromCharacter(buf.getChar(i))[0]);
+        
+        for(int i = 0; i<cursorPos; i++) {
+            screen.setCharacter(new TerminalPosition(i,0), 
+                                TextCharacter.fromCharacter(buf.getChar(i))[0]);
         }
-        screen.setCharacter(new TerminalPosition(cursorPos,0), TextCharacter.fromCharacter('|')[0]);
-        for(int i = cursorPos; i < buf.getSize(); i++){
-            screen.setCharacter(new TerminalPosition(i+1,0), TextCharacter.fromCharacter(buf.getChar(i))[0]);
+        screen.setCharacter(new TerminalPosition(cursorPos,0), 
+                            TextCharacter.fromCharacter('|')[0]);
+        for(int i = cursorPos; i<buf.getSize(); i++) {
+            screen.setCharacter(new TerminalPosition(i + 1,0),
+                                 TextCharacter.fromCharacter(buf.getChar(i))[0]);
         }
-//throws IOException < instructions want this in our signature but its mad at us
 
-        try{
+        try {
             screen.refresh();
-        } catch(Exception e){
+        } catch(Exception e) {
             System.err.println(e);
         }
         
@@ -53,9 +60,9 @@ public class TextEditor {
         String pathStr = args[0];
         System.out.format("Loading %s...\n", pathStr);
         Path path = Paths.get(pathStr);
-        if (Files.exists(path) & Files.isRegularFile(path)){
+        if (Files.exists(path) && Files.isRegularFile(path)) {
             String original = Files.readString(path);
-            for(int i = 0; i < original.length(); i++){
+            for(int i = 0; i<original.length(); i++) {
                 gap.insert(original.charAt(i));
             }
         }
@@ -63,20 +70,20 @@ public class TextEditor {
         
         screen.startScreen();
         boolean running = true;
-        while (running){
+        while (running) {
             KeyStroke stroke = screen.readInput();
             KeyType strokeType = stroke.getKeyType();
-            if (strokeType == KeyType.Character){
+            if (strokeType == KeyType.Character) {
                 gap.insert(stroke.getCharacter());
-            } else if (strokeType == KeyType.ArrowLeft){
+            } else if (strokeType == KeyType.ArrowLeft) {
                 gap.moveLeft();
-            } else if (strokeType == KeyType.ArrowRight){
+            } else if (strokeType == KeyType.ArrowRight) {
                 gap.moveRight();
-            } else if (strokeType == KeyType.Backspace){
+            } else if (strokeType == KeyType.Backspace) {
                 gap.delete();
-            } else if (strokeType == KeyType.Escape){
+            } else if (strokeType == KeyType.Escape) {
                 screen.stopScreen();
-                running=false;
+                running = false;
             }
             drawBuffer(gap, screen);
         }

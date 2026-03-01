@@ -6,29 +6,29 @@ package edu.grinnell.csc207.texteditor;
 public class GapBuffer implements Buffer {
     private int size, cursor, endGap;
     private char[] buff;
-    public GapBuffer(){
-        size=10;
+    public GapBuffer() {
+        size = 10;
         cursor = 0;
         endGap = size;
         buff = new char[size];
     }
 
-    public void expandBuffer(){
+    public void expandBuffer() {
         char[] old = buff;
-        buff = new char[size*2];
-        for(int i=0; i<cursor; i++){
+        buff = new char[size * 2];
+        for(int i = 0; i<cursor; i++) {
             buff[i] = old[i];
         }
-        for(int j = size-1; j >= endGap; j--){
-            buff[j+size] = old[j];
+        for(int j = size - 1; j>=endGap; j--) {
+            buff[j + size] = old[j];
         }
-        endGap+=size;
-        size*=2;
+        endGap += size;
+        size *= 2;
         
     }
 
     public void insert(char ch) {
-        if (cursor >= endGap){
+        if (cursor>=endGap) {
             this.expandBuffer();
         }
         buff[cursor] = ch;
@@ -36,7 +36,7 @@ public class GapBuffer implements Buffer {
     }
 
     public void delete() {
-        if(cursor != 0){
+        if(cursor != 0) {
             cursor--;
         }
     }
@@ -46,35 +46,35 @@ public class GapBuffer implements Buffer {
     }
 
     public void moveLeft() {
-        if (cursor > 0){
+        if (cursor>0) {
             buff[--endGap] = buff[--cursor];
         }
     }
 
     public void moveRight() {
-        if (endGap < size){
+        if (endGap<size) {
             buff[cursor++] = buff[endGap++];
         }
     }
 
     public int getSize() {
-        return size - (endGap-cursor);
+        return size - (endGap - cursor);
     }
 
     public char getChar(int i) {
-        if(i<cursor){
+        if(i<cursor) {
             return buff[i];
-        }else{
+        } else {
             return buff[i + endGap - cursor];
         }
     }
 
     public String toString() {
         String output = "";
-        for(int i = 0; i < cursor; i++){
+        for(int i = 0; i<cursor; i++) {
             output += buff[i];
         }
-        for (int i = endGap; i < size; i++){
+        for (int i = endGap; i<size; i++) {
             output += buff[i];
         }
         return output;

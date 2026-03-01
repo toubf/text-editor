@@ -4,8 +4,8 @@
 
 ## Resources Used
 
-+ oracle javadocs pages for String, char
-+ Referenced Ella & Cadel's SpeedReader for try/catch syntax
++ oracle javadocs pages for String, char, Throwable
++ Referenced Ella & Cadel's SpeedReader for try/catch syntax as well as the lab page for SpeedReader
 + ...
 
 ## Changelog

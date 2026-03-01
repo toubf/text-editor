@@ -10,14 +10,14 @@ import net.jqwik.api.constraints.*;
 
 public class GapBufferTests {
     @Test
-    public void emtpyBuffTest(){
+    public void emtpyBuffTest() {
         GapBuffer buffer = new GapBuffer();
-        assertEquals(0,buffer.getSize());
+        assertEquals(0, buffer.getSize());
         assertEquals(0, buffer.getCursorPosition());
     }
 
     @Test 
-    public void basicBuffTest(){
+    public void basicBuffTest() {
         GapBuffer buffer = new GapBuffer();
         buffer.insert(' ');
         assertEquals(1, buffer.getSize());
@@ -25,14 +25,14 @@ public class GapBufferTests {
         assertEquals(' ', buffer.getChar(0));
         assertEquals(" ", buffer.toString());
         buffer.delete();
-        assertEquals(0,buffer.getSize());
+        assertEquals(0, buffer.getSize());
         assertEquals(0, buffer.getCursorPosition());
     }
 
     @Test
-    public void longerBuffTest(){
+    public void longerBuffTest() {
         GapBuffer buffer = new GapBuffer();
-        for(int i=0; i < 10; i++){
+        for(int i = 0; i<10; i++) {
             buffer.insert(Integer.toString(i).charAt(0));
         }
         assertEquals(buffer.getSize(), buffer.getCursorPosition());
@@ -40,7 +40,7 @@ public class GapBufferTests {
         buffer.moveRight();
         assertEquals(buffer.getSize(), buffer.getCursorPosition());
 
-        for(int i=9; i >=0; i--){
+        for(int i = 9; i >= 0; i--) {
             buffer.moveLeft();
             assertEquals(i, buffer.getCursorPosition());
         }
@@ -51,7 +51,7 @@ public class GapBufferTests {
         assertEquals(10, buffer.getSize());
         assertEquals("0123456789", buffer.toString());
 
-        for(int i=0; i < 5; i++){
+        for(int i = 0; i<5; i++) {
             assertEquals(i, buffer.getCursorPosition());
             buffer.moveRight();
             
@@ -66,9 +66,9 @@ public class GapBufferTests {
     }
 
     @Test
-    public void longestBuffTest(){
+    public void longestBuffTest() {
         GapBuffer buffer = new GapBuffer();
-        for(int i=0; i < 10; i++){
+        for(int i = 0; i<10; i++) {
             buffer.insert(Integer.toString(i).charAt(0));
         }
         buffer.insert('0'); //inserts after buffer expansion
@@ -77,7 +77,7 @@ public class GapBufferTests {
         buffer.moveRight();
         assertEquals(buffer.getSize(), buffer.getCursorPosition());
 
-        for(int i=10; i >=0; i--){
+        for(int i = 10; i >= 0; i--) {
             buffer.moveLeft();
             assertEquals(i, buffer.getCursorPosition());
         }
@@ -88,7 +88,7 @@ public class GapBufferTests {
         assertEquals(11, buffer.getSize());
         assertEquals("01234567890", buffer.toString());
 
-        for(int i=0; i < 5; i++){
+        for(int i = 0; i<5; i++) {
             assertEquals(i, buffer.getCursorPosition());
             buffer.moveRight();
         }
@@ -103,12 +103,12 @@ public class GapBufferTests {
     }
 
     @Property
-    public boolean buffTest(@ForAll @IntRange(min=0, max=100) int n){
+    public boolean buffTest(@ForAll @IntRange(min = 0, max = 100) int n) {
         GapBuffer buffer = new GapBuffer();
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i<n; i++) {
             buffer.insert('p');
             buffer.insert('u');
         }
-        return ((buffer.getSize() == 2*n) && (buffer.getCursorPosition() == 2*n));
+        return ((buffer.getSize() == 2 * n) && (buffer.getCursorPosition() == 2 * n));
     }
 }

@@ -11,12 +11,16 @@ public class SimpleStringBuffer implements Buffer {
      * Constructs a SimpleStringBuffer object with an empty String buff and a 
      * cursor = 0
      */
-    public SimpleStringBuffer(){
+    public SimpleStringBuffer() {
         buff = "";
         cursor = 0;
 
     }
 
+    /**
+     * inserts given character at cursor position, moves cursor to right
+     * @param ch character to insert
+     */
     public void insert(char ch) {
         String old = buff;
         buff = old.substring(0,cursor);
@@ -25,11 +29,14 @@ public class SimpleStringBuffer implements Buffer {
         cursor++;
     }
 
+    /**
+     * Removes character before cursor position, moves cursor position left by 1
+     */
     public void delete() {
-        if (cursor != 0){
+        if (cursor != 0) {
             String old = buff;
             buff = old.substring(0, --cursor);
-            buff += old.substring(cursor +1);
+            buff += old.substring(cursor + 1);
         }
     }
 
@@ -40,14 +47,22 @@ public class SimpleStringBuffer implements Buffer {
         return cursor;
     }
 
+    /**
+     * Moves cursor position left. If cursor is already at front of buffer,
+     * does nothing.
+     */
     public void moveLeft() {
-        if (cursor != 0){
+        if (cursor != 0) {
           cursor--;
         }
     }
 
+    /**
+     * Moves cursor position right. If cursor is already at end of buffer,
+     * does nothing.
+     */
     public void moveRight() {
-        if (cursor != this.getSize()){
+        if (cursor != this.getSize()) {
             cursor++;
           }
     }
@@ -59,10 +74,17 @@ public class SimpleStringBuffer implements Buffer {
         return buff.length();
     }
 
+    /**
+     * @param i index in buffer
+     * @return character: char at i
+     */
     public char getChar(int i) {
         return buff.charAt(i);
     }
 
+    /**
+     * @return String: contents of buffer
+     */
     @Override
     public String toString() {
         return buff;
