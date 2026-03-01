@@ -23,7 +23,7 @@ public class SimpleStringBuffer implements Buffer {
      */
     public void insert(char ch) {
         String old = buff;
-        buff = old.substring(0,cursor);
+        buff = old.substring(0, cursor);
         buff += ch;
         buff += old.substring(cursor);
         cursor++;

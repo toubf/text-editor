@@ -10,7 +10,293 @@
 
 ## Changelog
 
-_(TODO: fill me in with a log of your committed changes)_
+littleca@hollerith:text-editor$ git log
+commit 258ee4038bfba995ac81d4559342de3fc351fb64 (HEAD -> main, origin/main, origin/HEAD)
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 12:08:22 2026 -0600
+
+    more style fixes
+
+commit 8e6856fe044a1299ae967f8f3f306a45ca320f03
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:57:56 2026 -0600
+
+    comments for GapBuffer
+
+commit 45b0271811f37d1656ffb2faf733ab0882405b63
+:...skipping...
+commit 258ee4038bfba995ac81d4559342de3fc351fb64 (HEAD -> main, origin/main, origin/HEAD)
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 12:08:22 2026 -0600
+
+    more style fixes
+
+commit 8e6856fe044a1299ae967f8f3f306a45ca320f03
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:57:56 2026 -0600
+
+    comments for GapBuffer
+
+commit 45b0271811f37d1656ffb2faf733ab0882405b63
+Author: littleca <carrieannelittle61@gmail.com>
+:...skipping...
+commit 258ee4038bfba995ac81d4559342de3fc351fb64 (HEAD -> main, origin/main, origin/HEAD)
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 12:08:22 2026 -0600
+
+    more style fixes
+
+commit 8e6856fe044a1299ae967f8f3f306a45ca320f03
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:57:56 2026 -0600
+
+    comments for GapBuffer
+
+commit 45b0271811f37d1656ffb2faf733ab0882405b63
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:46:36 2026 -0600
+:...skipping...
+commit 258ee4038bfba995ac81d4559342de3fc351fb64 (HEAD -> main, origin/main, origin/HEAD)
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 12:08:22 2026 -0600
+
+    more style fixes
+
+commit 8e6856fe044a1299ae967f8f3f306a45ca320f03
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:57:56 2026 -0600
+
+    comments for GapBuffer
+
+commit 45b0271811f37d1656ffb2faf733ab0882405b63
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:46:36 2026 -0600
+
+:...skipping...
+commit 258ee4038bfba995ac81d4559342de3fc351fb64 (HEAD -> main, origin/main, origin/HEAD)
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 12:08:22 2026 -0600
+
+    more style fixes
+
+commit 8e6856fe044a1299ae967f8f3f306a45ca320f03
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:57:56 2026 -0600
+
+    comments for GapBuffer
+
+commit 45b0271811f37d1656ffb2faf733ab0882405b63
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:46:36 2026 -0600
+
+    syntax fixes & simplestringbuffer comments & readme updated
+:...skipping...
+commit 258ee4038bfba995ac81d4559342de3fc351fb64 (HEAD -> main, origin/main, origin/HEAD)
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 12:08:22 2026 -0600
+
+    more style fixes
+
+commit 8e6856fe044a1299ae967f8f3f306a45ca320f03
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:57:56 2026 -0600
+
+    comments for GapBuffer
+
+commit 45b0271811f37d1656ffb2faf733ab0882405b63
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:46:36 2026 -0600
+
+    syntax fixes & simplestringbuffer comments & readme updated
+
+:...skipping...
+commit 258ee4038bfba995ac81d4559342de3fc351fb64 (HEAD -> main, origin/main, origin/HEAD)
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 12:08:22 2026 -0600
+
+    more style fixes
+
+commit 8e6856fe044a1299ae967f8f3f306a45ca320f03
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:57:56 2026 -0600
+
+    comments for GapBuffer
+
+commit 45b0271811f37d1656ffb2faf733ab0882405b63
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:46:36 2026 -0600
+
+    syntax fixes & simplestringbuffer comments & readme updated
+
+commit e839df7374be9d6d95916fd418eb5cc580032cb2
+:...skipping...
+commit 258ee4038bfba995ac81d4559342de3fc351fb64 (HEAD -> main, origin/main, origin/HEAD)
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 12:08:22 2026 -0600
+
+    more style fixes
+
+commit 8e6856fe044a1299ae967f8f3f306a45ca320f03
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:57:56 2026 -0600
+
+    comments for GapBuffer
+
+commit 45b0271811f37d1656ffb2faf733ab0882405b63
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:46:36 2026 -0600
+
+    syntax fixes & simplestringbuffer comments & readme updated
+
+commit e839df7374be9d6d95916fd418eb5cc580032cb2
+Author: littleca <carrieannelittle61@gmail.com>
+:...skipping...
+commit 258ee4038bfba995ac81d4559342de3fc351fb64 (HEAD -> main, origin/main, origin/HEAD)
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 12:08:22 2026 -0600
+
+    more style fixes
+
+commit 8e6856fe044a1299ae967f8f3f306a45ca320f03
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:57:56 2026 -0600
+
+    comments for GapBuffer
+
+commit 45b0271811f37d1656ffb2faf733ab0882405b63
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:46:36 2026 -0600
+
+    syntax fixes & simplestringbuffer comments & readme updated
+
+commit e839df7374be9d6d95916fd418eb5cc580032cb2
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:17:26 2026 -0600
+:...skipping...
+commit 258ee4038bfba995ac81d4559342de3fc351fb64 (HEAD -> main, origin/main, origin/HEAD)
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 12:08:22 2026 -0600
+
+    more style fixes
+
+commit 8e6856fe044a1299ae967f8f3f306a45ca320f03
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:57:56 2026 -0600
+
+    comments for GapBuffer
+
+commit 45b0271811f37d1656ffb2faf733ab0882405b63
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:46:36 2026 -0600
+
+    syntax fixes & simplestringbuffer comments & readme updated
+
+commit e839df7374be9d6d95916fd418eb5cc580032cb2
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:17:26 2026 -0600
+
+:...skipping...
+commit 258ee4038bfba995ac81d4559342de3fc351fb64 (HEAD -> main, origin/main, origin/HEAD)
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 12:08:22 2026 -0600
+
+    more style fixes
+
+commit 8e6856fe044a1299ae967f8f3f306a45ca320f03
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:57:56 2026 -0600
+
+    comments for GapBuffer
+
+commit 45b0271811f37d1656ffb2faf733ab0882405b63
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:46:36 2026 -0600
+
+    syntax fixes & simplestringbuffer comments & readme updated
+
+commit e839df7374be9d6d95916fd418eb5cc580032cb2
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:17:26 2026 -0600
+
+    finished screen & file io
+:...skipping...
+commit 258ee4038bfba995ac81d4559342de3fc351fb64 (HEAD -> main, origin/main, origin/HEAD)
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 12:08:22 2026 -0600
+
+    more style fixes
+
+commit 8e6856fe044a1299ae967f8f3f306a45ca320f03
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:57:56 2026 -0600
+
+    comments for GapBuffer
+
+commit 45b0271811f37d1656ffb2faf733ab0882405b63
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:46:36 2026 -0600
+
+    syntax fixes & simplestringbuffer comments & readme updated
+
+commit e839df7374be9d6d95916fd418eb5cc580032cb2
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:17:26 2026 -0600
+
+    finished screen & file io
+
+:...skipping...
+commit 258ee4038bfba995ac81d4559342de3fc351fb64 (HEAD -> main, origin/main, origin/HEAD)
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 12:08:22 2026 -0600
+
+    more style fixes
+
+commit 8e6856fe044a1299ae967f8f3f306a45ca320f03
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:57:56 2026 -0600
+
+    comments for GapBuffer
+
+commit 45b0271811f37d1656ffb2faf733ab0882405b63
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:46:36 2026 -0600
+
+    syntax fixes & simplestringbuffer comments & readme updated
+
+commit e839df7374be9d6d95916fd418eb5cc580032cb2
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:17:26 2026 -0600
+
+    finished screen & file io
+
+commit 9bf2a4eb53bbe797e3132dcbd4e143500ae221cc
+:...skipping...
+commit 258ee4038bfba995ac81d4559342de3fc351fb64 (HEAD -> main, origin/main, origin/HEAD)
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 12:08:22 2026 -0600
+
+    more style fixes
+
+commit 8e6856fe044a1299ae967f8f3f306a45ca320f03
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:57:56 2026 -0600
+
+    comments for GapBuffer
+
+commit 45b0271811f37d1656ffb2faf733ab0882405b63
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:46:36 2026 -0600
+
+    syntax fixes & simplestringbuffer comments & readme updated
+
+commit e839df7374be9d6d95916fd418eb5cc580032cb2
+Author: littleca <carrieannelittle61@gmail.com>
+Date:   Sun Mar 1 11:17:26 2026 -0600
+
+    finished screen & file io
+
+commit 9bf2a4eb53bbe797e3132dcbd4e143500ae221cc
+Author: littleca <carrieannelittle61@gmail.com>
 
 ## Analyzing the Simple String Buffer
 ----insert method of SimpleStringBuffer----
