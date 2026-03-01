@@ -32,7 +32,7 @@ public class SimpleStringBufferTests {
     @Test
     public void longerBuffTest() {
         SimpleStringBuffer buffer = new SimpleStringBuffer();
-        for(int i = 0; i<10; i++) {
+        for(int i = 0; i < 10; i++) {
             buffer.insert(Integer.toString(i).charAt(0));
         }
         assertEquals(buffer.getSize(), buffer.getCursorPosition());
@@ -51,7 +51,7 @@ public class SimpleStringBufferTests {
         assertEquals(10, buffer.getSize());
         assertEquals("0123456789", buffer.toString());
 
-        for(int i = 0; i<5; i++) {
+        for(int i = 0; i < 5; i++) {
             assertEquals(i, buffer.getCursorPosition());
             buffer.moveRight();
             
@@ -68,7 +68,7 @@ public class SimpleStringBufferTests {
     @Property
     public boolean buffTest(@ForAll @IntRange(min = 0, max = 100) int n) {
         SimpleStringBuffer buffer = new SimpleStringBuffer();
-        for (int i = 0; i<n; i++) {
+        for (int i = 0; i < n; i++) {
             buffer.insert('p');
             buffer.insert('u');
         }

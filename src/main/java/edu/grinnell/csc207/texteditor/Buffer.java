@@ -4,13 +4,14 @@ package edu.grinnell.csc207.texteditor;
  * A buffer captures the backing data structure for our text editor.
  */
 public interface Buffer {
-    /** Inserts a character at the index of the cursor
-     * 
+    /** 
+     * Inserts a character at the index of the cursor
      * @param ch character given by user to be inserted
      */
     public void insert(char ch);
 
-    /** Removes character preceeding the index of the cursor 
+    /** 
+     * Removes character preceeding the index of the cursor 
      */
     public void delete();
 

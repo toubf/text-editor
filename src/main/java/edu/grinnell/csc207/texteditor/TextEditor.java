@@ -24,20 +24,20 @@ public class TextEditor {
         screen.clear();
         int cursorPos = buf.getCursorPosition();
         
-        for(int i = 0; i<cursorPos; i++) {
-            screen.setCharacter(new TerminalPosition(i,0), 
+        for (int i = 0; i < cursorPos; i++) {
+            screen.setCharacter(new TerminalPosition(i, 0), 
                                 TextCharacter.fromCharacter(buf.getChar(i))[0]);
         }
-        screen.setCharacter(new TerminalPosition(cursorPos,0), 
+        screen.setCharacter(new TerminalPosition(cursorPos, 0), 
                             TextCharacter.fromCharacter('|')[0]);
-        for(int i = cursorPos; i<buf.getSize(); i++) {
-            screen.setCharacter(new TerminalPosition(i + 1,0),
+        for (int i = cursorPos; i < buf.getSize(); i++) {
+            screen.setCharacter(new TerminalPosition(i + 1, 0),
                                  TextCharacter.fromCharacter(buf.getChar(i))[0]);
         }
 
         try {
             screen.refresh();
-        } catch(Exception e) {
+        } catch (Exception e) {
             System.err.println(e);
         }
         
@@ -62,7 +62,7 @@ public class TextEditor {
         Path path = Paths.get(pathStr);
         if (Files.exists(path) && Files.isRegularFile(path)) {
             String original = Files.readString(path);
-            for(int i = 0; i<original.length(); i++) {
+            for (int i = 0; i < original.length(); i++) {
                 gap.insert(original.charAt(i));
             }
         }

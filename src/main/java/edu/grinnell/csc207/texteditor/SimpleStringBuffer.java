@@ -53,7 +53,7 @@ public class SimpleStringBuffer implements Buffer {
      */
     public void moveLeft() {
         if (cursor != 0) {
-          cursor--;
+            cursor--;
         }
     }
 
@@ -64,7 +64,7 @@ public class SimpleStringBuffer implements Buffer {
     public void moveRight() {
         if (cursor != this.getSize()) {
             cursor++;
-          }
+        }
     }
 
     /**

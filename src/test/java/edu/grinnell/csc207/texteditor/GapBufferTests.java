@@ -32,7 +32,7 @@ public class GapBufferTests {
     @Test
     public void longerBuffTest() {
         GapBuffer buffer = new GapBuffer();
-        for(int i = 0; i<10; i++) {
+        for(int i = 0; i < 10; i++) {
             buffer.insert(Integer.toString(i).charAt(0));
         }
         assertEquals(buffer.getSize(), buffer.getCursorPosition());
@@ -51,7 +51,7 @@ public class GapBufferTests {
         assertEquals(10, buffer.getSize());
         assertEquals("0123456789", buffer.toString());
 
-        for(int i = 0; i<5; i++) {
+        for(int i = 0; i < 5; i++) {
             assertEquals(i, buffer.getCursorPosition());
             buffer.moveRight();
             
@@ -68,7 +68,7 @@ public class GapBufferTests {
     @Test
     public void longestBuffTest() {
         GapBuffer buffer = new GapBuffer();
-        for(int i = 0; i<10; i++) {
+        for(int i = 0; i < 10; i++) {
             buffer.insert(Integer.toString(i).charAt(0));
         }
         buffer.insert('0'); //inserts after buffer expansion
@@ -88,7 +88,7 @@ public class GapBufferTests {
         assertEquals(11, buffer.getSize());
         assertEquals("01234567890", buffer.toString());
 
-        for(int i = 0; i<5; i++) {
+        for(int i = 0; i < 5; i++) {
             assertEquals(i, buffer.getCursorPosition());
             buffer.moveRight();
         }
@@ -105,7 +105,7 @@ public class GapBufferTests {
     @Property
     public boolean buffTest(@ForAll @IntRange(min = 0, max = 100) int n) {
         GapBuffer buffer = new GapBuffer();
-        for (int i = 0; i<n; i++) {
+        for (int i = 0; i < n; i++) {
             buffer.insert('p');
             buffer.insert('u');
         }
