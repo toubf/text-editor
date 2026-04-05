@@ -3,7 +3,7 @@ package edu.grinnell.csc207.inheritance;
 import java.util.List;
 
 /** A CEO. */
-public class CEO extends Employee{
+public class CEO extends Employee {
 
     private List<Employee> reportees;
 

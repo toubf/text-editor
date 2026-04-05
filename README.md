@@ -5,8 +5,6 @@
 ## Resources Used
 
 + oracle javadocs pages for String, char
-+ ...
-+ ...
 
 ## Changelog
 

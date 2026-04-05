@@ -3,9 +3,9 @@ package edu.grinnell.csc207.generics;
 import java.util.Arrays;
 
 /**
- * An array-based implementation of a list, specialized to ints.
+ * An array-based implementation of a list.
  */
-public class ArrayList<T> implements List<T>{
+public class ArrayList<T> implements List<T> {
 
     private static final int INITIAL_SIZE = 8;
 
@@ -18,7 +18,7 @@ public class ArrayList<T> implements List<T>{
      */
     @SuppressWarnings("unchecked")
     public ArrayList() {
-        this.data = (T[])(new Object[INITIAL_SIZE]);
+        this.data = (T[]) (new Object[INITIAL_SIZE]);
         this.sz = 0;
     }
 
@@ -72,46 +72,50 @@ public class ArrayList<T> implements List<T>{
         }
     }
 
-    /** Place a new element sep of type T inbetween each pair of existing elements
+    /** 
+     * Place a new element sep of type T inbetween each pair of existing elements
      * 
      * @param sep the element to insert
      */
-    private void intersperse(T sep){
+    private void intersperse(T sep) {
         T[] peeeww = this.data;
-        this.data = (T[])(new Object[2*this.size()]);
-        for( int i = 0; i < (peeeww.length - 2); i++){
+        this.data = (T[]) (new Object[2 * this.size()]);
+        for (int i = 0; i < (peeeww.length - 2); i++) {
             this.add(peeeww[i]);
             this.add(sep);
         } 
-        this.add(peeeww[peeeww.length-1]);
+        this.add(peeeww[peeeww.length - 1]);
     }
 
-    /** Comparison cannot be made over type T, because comparisons are specific
+    /** 
+     * Comparison cannot be made over type T, because comparisons are specific
      * to object type
-     *  
+     *  @return nothing :(
      */ 
-    private T maximum(){
+    private T maximum() {
         throw new UnsupportedOperationException();
     }
 
-    /** Returns the array list as a string in the form "[x, x1,... xn]"
+    /** 
+     * Returns the array list as a string in the form "[x, x1,... xn]"
      * 
      * @return String 
     */
-    private String makeIntoString(){
+    private String makeIntoString() {
         String contents = "[";
-        for(int i = 0; i < this.size(); i++){
+        for (int i = 0; i < this.size(); i++) {
             contents += this.get(i) + ", ";
         }
         contents += "]";
         return contents;
         
     }
-    /** Comparison cannot be made over type T, because comparisons are specific
+    /** 
+     * Comparison cannot be made over type T, because comparisons are specific
      * to object type
      * We feel sad about this :C
      */ 
-    private void insertionSort(){
+    private void insertionSort() {
         throw new UnsupportedOperationException();
     }
 }
