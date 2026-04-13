@@ -3,11 +3,11 @@ package edu.grinnell.csc207.generics;
 /**
  * interface outline for a list
  */
-public interface List <T> {
+public interface List<T> {
 
     /**
      * adds element to list
-     * @param T element to add
+     * @param value element to add
      */
     public void add(T value);
 
