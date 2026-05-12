@@ -4,8 +4,14 @@ package edu.grinnell.csc207.texteditor;
  * A gap buffer-based implementation of a text buffer.
  */
 public class GapBuffer implements Buffer {
-    private int size, cursor, endGap;
+    private int size;
+
+    private int cursor;
+    
+    private int endGap;
+
     private char[] buff;
+
     /**
      * Constructs an empty GapBuffer object of size 10.
      */

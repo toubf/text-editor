@@ -110,6 +110,7 @@ public class ArrayList<T> implements List<T> {
         return contents;
         
     }
+
     /** 
      * Comparison cannot be made over type T, because comparisons are specific
      * to object type

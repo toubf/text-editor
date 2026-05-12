@@ -5,6 +5,7 @@ package edu.grinnell.csc207.texteditor;
  */
 public class SimpleStringBuffer implements Buffer {
     private String buff;
+
     private int cursor;
 
     /**
@@ -14,7 +15,6 @@ public class SimpleStringBuffer implements Buffer {
     public SimpleStringBuffer() {
         buff = "";
         cursor = 0;
-
     }
 
     /**

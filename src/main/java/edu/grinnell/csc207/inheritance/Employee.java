@@ -3,8 +3,11 @@ package edu.grinnell.csc207.inheritance;
 /** An employee. */
 public class Employee {
     protected int salary;
+
     protected String name;
+
     protected String id;
+    
     protected String workNoise;
 
     /** @return the employee's name. */

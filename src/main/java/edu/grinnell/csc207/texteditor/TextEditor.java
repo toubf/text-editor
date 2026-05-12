@@ -1,4 +1,5 @@
 package edu.grinnell.csc207.texteditor;
+
 import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
 import com.googlecode.lanterna.screen.Screen;
 import com.googlecode.lanterna.TextCharacter;
